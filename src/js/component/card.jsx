@@ -1,19 +1,15 @@
 import React from "react";
+import rigo from "/workspace/landingPageWithReact/src/img/rigo-baby.jpg";
 
-const Card = () => {
+const Card = (props) => {
 	return (
 		<div className="card ms-5 me-1 mt-3" style={{ padding: 0 }}>
-			<img
-				className="card-img-top"
-				src="https://loremflickr.com/500/325?random=1"
-				alt="Card image cap"
-			/>
+			<img className="card-img-top" src={rigo} alt="Card image cap" />
 			<div className="card-body">
-				<h5 className="card-title">Card title</h5>
-				<p className="card-text">
-					Some quick example text to build on the card title and make
-					up the bulk of the card's content.
-				</p>
+				<h5 className="card-title">
+					<strong>{props.cTitle}</strong>
+				</h5>
+				<p className="card-text">{props.cText}</p>
 				<div
 					className="progress"
 					style={{ height: 1 + "px", width: 100 + "%" }}>
